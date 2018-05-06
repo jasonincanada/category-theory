@@ -53,3 +53,17 @@ graphviz (Poset _ relation) = "digraph ProductPoset {\n" ++ nodes ++ "}"
         edge (Relation a b) = "  \"" ++ show a ++ "\" -> \"" ++ show b ++ "\""
         nonidentities       = filter (\(Relation a b) -> a /= b) relation
 
+{-
+    *Main> putStrLn $ graphviz $ product poset1 poset2
+    digraph ProductPoset {
+      "('a',1)" -> "('a',2)"
+      "('a',1)" -> "('b',1)"
+      "('a',1)" -> "('b',2)"
+      "('a',1)" -> "('c',1)"
+      "('a',1)" -> "('c',2)"
+      "('a',2)" -> "('b',2)"
+      "('a',2)" -> "('c',2)"
+      "('b',1)" -> "('b',2)"
+      "('c',1)" -> "('c',2)"
+    }
+-}
