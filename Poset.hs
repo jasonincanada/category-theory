@@ -36,6 +36,11 @@ product p1@(Poset ob1 rel1) p2@(Poset ob2 rel2) = Poset objects relation
 -- Because poset relations are transitive, and we don't explicitly list compositions
 -- in our list of relations, checking only for (a, b) isn't enough, we have to
 -- recursively walk the nodes to find whether a <= b along multiple arrows
+--
+-- Note there is no "Ord a" type constraint on this function (or anywhere in this
+-- file), since whether a <= b isn't really about comparison on the underlying
+-- data type, rather the existence of a path through the list of relations,
+-- which only requires matching source and target objects (hence the Eq constraint)
 havePath :: Eq a => [Relation a] -> a -> a -> Bool
 havePath _ a b | a == b = True
 havePath relation a b   = walk a b relation
