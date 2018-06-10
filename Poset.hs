@@ -1,8 +1,8 @@
 {- Poset.hs
 
-   About: Code to compute a product poset, to answer exercise 1.43 in the book
+   About: Code to compute a product poset, to answer exercise 1.47 in the book
           Seven Sketches in Compositionality: An Invitation to Applied Category Theory
-          (Brendan Fong, David I. Spivak) (May 18, 2018 edition)
+          (Brendan Fong, David I. Spivak) (June 8, 2018 edition)
 
 -}
 
