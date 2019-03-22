@@ -39,7 +39,7 @@ histo alg = worker >>> attribute
     mkAttr (a, b) = Attr a b
 
 
--- Model the natural numbers
+-- Model the natural numbers (with 0)
 data Nat a = Zero
            | Next a
            deriving (Show, Functor)
